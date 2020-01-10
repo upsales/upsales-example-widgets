@@ -1,0 +1,25 @@
+{
+  "fields": {
+    "account": [],
+    "user": []
+  },
+  "uiElements": {
+    "account": {
+      "sidebarTop": [
+        {
+          "name": "accountWidget",
+          "type": "widget"
+        }
+      ]
+    },
+    "editOrder": {
+      "sidebar": [
+        {
+          "name": "orderWidget",
+          "type": "widget"
+        }
+      ]
+    }
+  },
+  "requirements": []
+}
