@@ -33,7 +33,7 @@ Use the following settings when setting up the app integration in Upsales
         - Disable order orderRow@1 custom 38
         - Disable order custom 5
 
-3. To set values on oeder, input the following command: `Set order <field> <valueOrId> <valueOrAttr> <value>`
+3. To set values on order, input the following command: `Set order <field> <valueOrId> <valueOrAttr> <value>`
     * Examples
         - Set order description 'Changed'
         - Set order stage id 9
