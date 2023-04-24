@@ -56,21 +56,23 @@ const { BadRequest } = require('http-errors');
 		}
 
 		editResponse.updated = {
-			date: '2021-01-01',
-			project: { id: 1 },
-			orderRow: [
-				{
-					id: 2,
-					price: 1000,
-					custom: [
-						{ id: 30, value: true },
-						{ id: 31, value: '1', options: ['1', '2', '3'] },
-					]
-				}
-			],
-			custom: [
-				{ id: 6, value: 'text' }
-			]
+			order: {
+				date: '2021-01-01',
+				project: { id: 1 },
+				orderRow: [
+					{
+						id: 2,
+						price: 1000,
+						custom: [
+							{ id: 30, value: true },
+							{ id: 31, value: '1', options: ['1', '2', '3'] },
+						]
+					}
+				],
+				custom: [
+					{ id: 6, value: 'text' }
+				]
+			}
 		}
 */
 
