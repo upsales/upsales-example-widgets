@@ -14,7 +14,15 @@ const { BadRequest } = require('http-errors');
 						41: false
 					}
 				},
-				orderRow@301: {
+				orderRow@301: { // Targeting id
+					price: true,
+					quantity: true,
+					custom: {
+						40: true,
+						41: false
+					}
+				},
+				orderRow#2: { // Targeting sortId
 					price: true,
 					quantity: true,
 					custom: {
@@ -40,7 +48,15 @@ const { BadRequest } = require('http-errors');
 						41: true
 					}
 				},
-				orderRow@301: {
+				orderRow@301: { // Targeting id
+					price: true,
+					quantity: true,
+					custom: {
+						40: true,
+						41: false
+					}
+				},
+				orderRow#2: { // Targeting sortId
 					price: true,
 					quantity: true,
 					custom: {
@@ -67,6 +83,14 @@ const { BadRequest } = require('http-errors');
 							{ id: 30, value: true },
 							{ id: 31, value: '1', options: ['1', '2', '3'] },
 						]
+					},
+					{
+						price: 200,
+						custom: [
+							{ id: 30, value: true },
+							{ id: 31, value: '1', options: ['1', '2', '3'] },
+						],
+						sortId: 2
 					}
 				],
 				custom: [
