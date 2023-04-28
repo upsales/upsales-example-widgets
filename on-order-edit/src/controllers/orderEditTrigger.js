@@ -186,7 +186,9 @@ module.exports = ({ body }) => {
 		disabled: {}
 	};
 
-	const order = body.data;
+	// changes is an experimental feature where we are determining what
+	// fields have changed by comparing order and previousOrder
+	const { order, previousOrder, changes } = body.data;
 
 	const descriptionParts = order.description ? order.description.split(' ') : [];
 	const action = descriptionParts[0] ? descriptionParts[0].toLowerCase() : '';
