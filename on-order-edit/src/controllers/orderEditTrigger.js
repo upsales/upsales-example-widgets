@@ -81,20 +81,21 @@ const { BadRequest } = require('http-errors');
 						price: 1000,
 						custom: [
 							{ id: 30, value: true },
-							{ id: 31, value: '1', options: ['1', '2', '3'] },
+							{ id: 31, value: '1', default: ['1', '2', '3'] },
 						]
 					},
 					{
 						price: 200,
 						custom: [
 							{ id: 30, value: true },
-							{ id: 31, value: '1', options: ['1', '2', '3'] },
+							{ id: 31, value: '1', default: ['1', '2', '3'] },
 						],
 						sortId: 2
 					}
 				],
 				custom: [
-					{ id: 6, value: 'text' }
+					{ id: 6, value: 'text' },
+					{ id: 7, value: '5', default: ['4', '5', '6'] },
 				]
 			}
 		}
