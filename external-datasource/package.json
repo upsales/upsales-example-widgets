@@ -1,0 +1,43 @@
+{
+    "name": "datasource-integration",
+    "version": "1.0.1",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "test": "jest",
+        "start": "node src/server.js",
+        "dev": "node-dev src/server.js",
+        "bump": "bumpme",
+        "gen-env": "sed 's/=.*/=/' .env.example > .env",
+        "setup": "./setup.sh"
+    },
+    "author": "Upsales dev",
+    "license": "ISC",
+    "dependencies": {
+        "@upsales/node-upsales": "^1.1.1",
+        "@upsales/node-upsales-promise": "^1.4.4",
+        "aws-serverless-express": "^3.3.6",
+        "axios": "^0.19.0",
+        "axios-retry": "^3.1.2",
+        "bumpme": "^1.1.1",
+        "dotenv": "^5.0.1",
+        "express": "^4.17.1",
+        "jest": "^24.9.0",
+        "ngrok": "^4.3.3",
+        "nodemon": "^2.0.20",
+        "serialize-error": "^5.0.0",
+        "winston": "^2.4.4"
+    },
+    "jest": {
+        "collectCoverageFrom": [
+            "src/**/*.{js,}",
+            "!**/node_modules/**"
+        ],
+        "testPathIgnorePatterns": [
+            "testObjects.js"
+        ]
+    },
+    "devDependencies": {
+        "node-dev": "^4.0.0"
+    }
+}
