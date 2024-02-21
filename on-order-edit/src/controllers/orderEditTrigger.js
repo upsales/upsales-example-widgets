@@ -16,6 +16,12 @@ const { BadRequest } = require('http-errors');
 				salesCoach: false,
 				marketingContribution: false,
 				notes: false,
+				totalGross: false,
+				totalDiscount: false,
+				totalContributionMargin: false,
+				totalRR: false,
+				totalOneOff: false,
+				totalNet: false,
 				orderRow: {
 					product: false,
 					price: false,
