@@ -6,9 +6,23 @@ const { BadRequest } = require('http-errors');
 		editResponse.visible = {
 			order: {
 				date: false,
+				description: false,
+				stage: false,
+				probability: false,
+				clientConnection: false,
+				project: false,
+				recurringInterval: false,
+				selectedCurrency: false,
+				salesCoach: false,
+				marketingContribution: false,
+				notes: false,
 				orderRow: {
+					product: false,
 					price: false,
 					quantity: false,
+					discountPercent: false,
+					discount: false,
+					purchaseCost: false,
 					custom: {
 						40: true,
 						41: false
@@ -40,9 +54,23 @@ const { BadRequest } = require('http-errors');
 		editResponse.disabled = {
 			order: {
 				date: true,
+				description: true,
+				stage: true,
+				probability: true,
+				clientConnection: true,
+				project: true,
+				recurringInterval: true,
+				selectedCurrency: true,
+				salescoach: true,
+				marketingContribution: true,
+				notes: true,
 				orderRow: {
+					product: true,
 					price: true,
 					quantity: true,
+					discountPercent: true,
+					discount: true,
+					purchaseCost: false,
 					custom: {
 						40: false,
 						41: true
