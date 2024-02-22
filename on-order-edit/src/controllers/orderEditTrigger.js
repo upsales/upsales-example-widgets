@@ -133,6 +133,37 @@ const { BadRequest } = require('http-errors');
 				]
 			}
 		}
+
+		editResponse.added = {
+			order: {
+				orderRow: [
+					{
+						quantity: 3,
+						price: 100,
+						discount: 0,
+						bundleRows: [],
+						product: {
+							id: 10000530,
+							listPrice: 1000,
+						},
+						productId: 10000530,
+						listPrice: 1000,
+						purchaseCost: 0,
+						priceListId: 1,
+						oldQuantity: 1
+					}
+				]
+			}
+		}
+
+		editResponse.removed = {
+			order: {
+				orderRow: [
+					{ sortId: 3 }, // Targeting sortId
+					{ id: 1 } // Targeting id
+				]
+			}
+		}
 */
 
 const AVAILABLEACTIONS = {
