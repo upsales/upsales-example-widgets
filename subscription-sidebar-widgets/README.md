@@ -1,21 +1,44 @@
-# subscription-sidebar-widgets
-_Short description what the integration does_
+# Subscription sidebar widgets
+This is an example app which displays widgets in the sidebar of a subscription.
 
-## Where is it?
-_Where is it running_
-_What endpoint does it listen to_
-_Are there different deployments for beta/prod_
-_Where are the logs_
+## Upsales App integration setup?
+Use the following settings when setting up the app integration in Upsales
+1. App name: <input_name>
+2. Add support mail: <your_email>
+3. Description: <input_description>
+4. Endpoint: <input_url_to_server_running_application>
+5. Use API key: <toggle true>
+6. User configurable: <toggle false>
+7. Input the following configuration:
+```json
+{
+	"fields": {
+		"account": [],
+		"user": []
+	},
+	"uiElements": {
+		"editSubscription": {
+			"sidebar": [
+				{
+					"name": "subscriptionWidget",
+					"type": "widget"
+				},
+				{
+					"name": "subscriptionIframe",
+					"type": "iframe"
+				}
+			]
+		}
+	},
+	"requirements": []
+}
+```
+8. Save
 
-## How to deploy?
-_Any special deployment or set-up steps_
 
-## Environment variables
-_Which environment variables are there on what do they do_
+## Activate Upsales app
+1. Search for the application name
+2. Click on the application
+3. Activate the application
 
-## What are the different endpoints used for?
-_Short description about the different endpoints, what does it listen do and why?_
-
-## Dev environment
-_How to run the integration on a dev environment_
 
