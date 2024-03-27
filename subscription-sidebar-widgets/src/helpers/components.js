@@ -14,6 +14,7 @@ const Barchart = (props) => ({
 
 const Button = (props) => ({
 	type: 'button',
+	text: props.text,
 	buttonType: props.buttonType, // 'lined', 'link', defaults to 'lined'
 	color: props.color, // Upsales color
 	fullWidth: props.fullWidth, // boolean

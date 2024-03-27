@@ -6,10 +6,8 @@ router.post('/', (req, res) => {
         <head>
         <script type="text/javascript">
           window.addEventListener('message', function (e) {
-            console.log('onMessage!', e.data)
             let show = false;
             const subscription = JSON.parse(e.data[1])
-            console.log('subscription', typeof subscription, subscription.description)
 
             if(!subscription.id) {
 
