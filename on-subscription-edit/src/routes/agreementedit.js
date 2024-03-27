@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const orderEditTrigger = require('../controllers/agreementedit');
+const agreementEditTrigger = require('../controllers/agreementedit');
 const logger = require('../helpers/log');
 const { isApiUser } = require('../helpers/upsalesMethods');
 
@@ -11,8 +11,8 @@ router.post('/', async (req, res) => {
 	}
 
 	try {
-		const newOrder = await orderEditTrigger(req);
-		return res.send(newOrder);
+		const modifiedSubscription = await agreementEditTrigger(req);
+		return res.send(modifiedSubscription);
 	} catch(err) {
 		logger.error('Error', err);
 		return res.sendStatus(500);

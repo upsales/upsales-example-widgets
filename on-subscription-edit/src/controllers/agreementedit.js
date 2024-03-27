@@ -181,7 +181,8 @@ const AVAILABLEACTIONS = {
 	SHOW: 'show',
 	SET: 'set',
 	ADD: 'add',
-	REMOVE: 'remove'
+	REMOVE: 'remove',
+	WAIT: 'wait'
 };
 
 const numberFields = ['probability', 'marketingContribution', 'recurringInterval'];
@@ -369,7 +370,7 @@ const parseFields = (descriptionParts, value) => {
 	};
 };
 
-module.exports = ({ body }) => {
+module.exports = async ({ body }) => {
 	if(!body.data?.current) {
 		throw new BadRequest('Missing order');
 	}
@@ -378,8 +379,6 @@ module.exports = ({ body }) => {
 		visible: {},
 		disabled: {}
 	};
-
-	console.log('body.data.current?.custom', body.data.current?.custom)
 
 	const actionCustomFieldId = 88;
 	const alternativeCustomFieldId = 47;
@@ -447,6 +446,9 @@ module.exports = ({ body }) => {
 		editResponse.removed = { [entity]: {
 			[field]: [{ [key]: Number(value) }]
 		}};
+	} else if (action === AVAILABLEACTIONS.WAIT) {
+		const wait = parseInt(splittedCommands[1]);
+		await new Promise(resolve => setTimeout(resolve, wait));
 	}
 
 	return editResponse;
