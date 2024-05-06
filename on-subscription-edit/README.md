@@ -9,13 +9,19 @@ Use the following settings when setting up the app integration in Upsales
 4. Endpoint: <input_url_to_server_running_application>
 5. Use API key: <toggle true>
 6. User configurable: <toggle false>
-7. Order or Opportunity was edited: <toggle true>
+7. Recurring order was edited: <toggle true>
 8. Active: <toggle true>
 
 ## Activate Upsales app
 1. Search for the application name
 2. Click on application.
 3. Activate
+
+## Setup action field
+This app listens and acts on changes on a specific custom field.
+1. Add a new text custom field for `Order`.
+2. Find and copy the custom field id for it.
+3. Go into `agreementedit.js` inside this repository and set `actionCustomFieldId` to the custom field id.
 
 
 ## How to use
