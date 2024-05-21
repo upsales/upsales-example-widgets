@@ -5,6 +5,7 @@ const { BadRequest } = require('http-errors');
 
 		editResponse.visible = {
 			order: {
+				copyButton: false, // Hides the standard copy button, useful when you have your own copy button
 				date: false,
 				description: false,
 				stage: false,
